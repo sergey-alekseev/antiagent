@@ -1,9 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.3'
+gem 'jquery-rails'
+gem "twitter-bootstrap-rails"
+gem "bootstrap-sass", ">= 2.0.1"
 
 group :development do
   gem 'sqlite3'
+	gem 'haml-rails', '>= 0.3.4'
 end
 
 group :assets do
@@ -12,8 +16,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
-
 group :production do
-  gem 'pg', '0.12.2'
+  gem 'pg'
+  gem 'thin'
 end
