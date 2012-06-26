@@ -21,8 +21,22 @@ $(document).ready(function(){
         .click(function () {
             var btn = $(this)
             btn.button('loading')
-//            setTimeout(function () {
-//                btn.button('reset')
-//            }, 3000)
         })
+    // override yandex share api for anticached version
+    new Ya.share({
+        element: 'ya_share',
+        elementStyle: {
+            'type': 'none',
+            'quickServices': ['facebook,twitter,vkontakte,odnoklassniki']
+        },
+        title: 'Антиагент',
+        description: 'Вычисли агента по номеру телефона!',
+        link: 'http://antiagent.herokuapp.com/',
+        image: 'http://antiagent.herokuapp.com/assets/aa-logo.png',
+        serviceSpecific: {
+            twitter: {
+                title: 'Антиагент - вычисли агента по номеру телефона!'
+            }
+        }
+    });
 });
