@@ -6,8 +6,8 @@ en:
   agent:
     primary_text: "It's agent."
     secondary_text: "May be luck next time..."
-    call_text: "Call, no matter"
   not_agent:
     primary_text: "Not agent."
     secondary_text: "You are lucky!"
-    call_text: "Call"
+  call_text: "Call"
+  number_beginning: "+375 (29) "

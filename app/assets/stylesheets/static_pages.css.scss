@@ -6,16 +6,10 @@
   text-align: center;
 }
 
-#number_input, #area_code_input, #country_code_input {
+#number_input {
   height: 37px;
+  width: 350px;
   font-size: 37px;
-}
-
-#area_code_input {
-  width: 70px;
-}
-#country_code_input {
-  width: 90px;
 }
 
 #search-btn {
@@ -26,8 +20,8 @@
   //font-size: 15px;
 }
 
-#call {
-  width: 480px;
+#call-btn {
+  width: 454px;
 }
 
 .form-search {

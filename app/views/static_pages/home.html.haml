@@ -1,14 +1,11 @@
 .centered
   = form_tag root_path, method: 'get', class: 'form-search' do
-    = text_field_tag :country_code, params[:country_code], class:'input-small search-query', id: 'country_code_input'
-    = text_field_tag :area_code, params[:area_code], class:'input-small search-query', id: 'area_code_input'
     = text_field_tag :number, params[:number], class:'input-medium search-query', id: 'number_input'
     %button#search-btn.btn.btn-primary.btn-large{:type => "submit", "data-loading-text" => "Loading..."} Search
-  - if params[:number]
+  - if params[:number]!=t('number_beginning')
     #output{ class: @output_class }
       %p
         %strong #{@primary_text}
         %br/
         #{@secondary_text}
-  - if params[:number]
-    %a#call{href: @tel_link, class: "btn #{@btn_class} btn-large"} #{@call_text}
+    %a#call-btn{href: @tel_link, class: "btn #{@btn_class} btn-large"} #{@call_text}

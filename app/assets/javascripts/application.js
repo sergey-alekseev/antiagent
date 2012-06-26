@@ -22,6 +22,22 @@ $(document).ready(function(){
             var btn = $(this)
             btn.button('loading')
         })
+    // number input logic
+    $('#number_input')
+        .keypress(function() {
+            var firstPart=/\+\d+\s\(\d+\)\s\d{3}$/;
+            var secondPart=/\+\d+\s\(\d+\)\s\d{3}-\d{2}$/;
+            var val = $(this).val();
+            if(val.match(firstPart) || val.match(secondPart)){
+                $(this).val(val + '-');
+            }
+        })
+        .keyup(function() {
+            var thirdPart=/\+\d+\s\(\d+\)\s(\d{3})-(\d{2})-\d{2}$/;
+            if($(this).val().match(thirdPart)){
+                $('#search-btn').click();
+            }
+        });
     // override yandex share api for anticached version
     new Ya.share({
         element: 'ya_share',

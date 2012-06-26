@@ -10,7 +10,6 @@ class StaticPagesController < ApplicationController
         @alert_class = "alert-error"
         @primary_text = t('agent.primary_text')
         @secondary_text = t('agent.secondary_text')
-        #@call_text = t('agent.call_text')
       else
         @output_class = "green"
         @btn_class = "btn-success"
@@ -18,8 +17,10 @@ class StaticPagesController < ApplicationController
         @primary_text = t('not_agent.primary_text')
         @secondary_text = t('not_agent.secondary_text')
       end
-      @call_text = "#{t('not_agent.call_text')} #{params[:country_code]}-#{params[:area_code]}-#{params[:number]}"
-      @tel_link = "tel:#{params[:country_code]}-#{params[:area_code]}-#{params[:number]}"
+      @call_text = "#{t('call_text')} #{params[:number]}"
+      @tel_link = "tel:#{params[:number]}"
+    else
+      params[:number]=t('number_beginning')
     end
   end
 
