@@ -4,10 +4,10 @@ gem 'rails', '3.2.3'
 gem 'jquery-rails'
 gem "twitter-bootstrap-rails"
 gem "bootstrap-sass", ">= 2.0.1"
+gem 'haml-rails', '>= 0.3.4'
 
 group :development do
   gem 'sqlite3'
-	gem 'haml-rails', '>= 0.3.4'
 end
 
 group :assets do
