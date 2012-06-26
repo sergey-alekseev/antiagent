@@ -1,5 +1,6 @@
 Antiagent::Application.routes.draw do
   match 'about' => 'static_pages#about'
+  match 'help' => 'static_pages#help'
 
   root to: 'static_pages#home'
 

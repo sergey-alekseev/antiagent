@@ -16,5 +16,13 @@
 //= require_tree .
 
 $(document).ready(function(){
-  /* Your javascripts goes here... */
+    // search button state
+    $('#search-btn')
+        .click(function () {
+            var btn = $(this)
+            btn.button('loading')
+//            setTimeout(function () {
+//                btn.button('reset')
+//            }, 3000)
+        })
 });

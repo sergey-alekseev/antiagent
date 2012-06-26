@@ -1,3 +1,43 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.centered {
+  text-align: center;
+}
+
+#number_input, #area_code_input, #country_code_input {
+  height: 37px;
+  font-size: 37px;
+}
+
+#area_code_input {
+  width: 70px;
+}
+#country_code_input {
+  width: 90px;
+}
+
+#search-btn {
+  width: 100px;
+}
+
+#output p{
+  //font-size: 15px;
+}
+
+#call {
+  width: 480px;
+}
+
+.form-search {
+  margin-bottom: 9px;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
